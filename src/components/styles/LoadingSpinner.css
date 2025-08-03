@@ -1,0 +1,19 @@
+.rl-loading-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+
+.rl-loading-spinner {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.rl-loading-text {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}

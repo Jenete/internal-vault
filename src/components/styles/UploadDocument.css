@@ -1,0 +1,104 @@
+.rl-upload-doc {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.rl-upload-form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.rl-upload-form input[type="file"] {
+  flex: 1;
+}
+
+.rl-upload-form button {
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.rl-upload-form button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.rl-doc-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rl-doc-item {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.rl-doc-info {
+  flex: 1 1 auto;
+}
+
+.rl-doc-link {
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.rl-doc-link:hover {
+  text-decoration: underline;
+}
+
+.rl-doc-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.rl-doc-copy,
+.rl-doc-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #4b5563;
+  transition: color 0.2s ease;
+}
+
+.rl-doc-copy:hover {
+  color: #3b82f6;
+}
+
+.rl-doc-delete:hover {
+  color: #ef4444;
+}
+
+@media (max-width: 600px) {
+  .rl-doc-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .rl-doc-actions {
+    align-self: flex-end;
+  }
+}

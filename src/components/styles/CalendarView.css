@@ -1,0 +1,48 @@
+.rl-calendar-view {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.rl-calendar-view h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.rl-calendar-list {
+  list-style: none;
+  padding: 0;
+}
+
+.rl-calendar-list li {
+  font-size: 1rem;
+  color: #444;
+  background: #f8f9fa;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rl-calendar-list li i {
+  color: #007bff;
+}
+
+@media (max-width: 500px) {
+  .rl-calendar-view {
+    padding: 1.2rem;
+  }
+
+  .rl-calendar-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.95rem;
+  }
+}

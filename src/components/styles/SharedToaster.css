@@ -1,0 +1,32 @@
+.rl-toaster {
+  position: fixed;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rl-toaster-success {
+  background-color: #28a745;
+}
+
+.rl-toaster-error {
+  background-color: #dc3545;
+}
+
+@media (max-width: 480px) {
+  .rl-toaster {
+    width: 90%;
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+}

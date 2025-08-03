@@ -1,0 +1,49 @@
+.rl-homepage {
+  max-width: 1024px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.rl-homepage-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.rl-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.rl-home-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+}
+
+.rl-home-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.rl-home-card h4 {
+  margin: 0.75rem 0 0.5rem;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.rl-home-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.rl-home-icon {
+  font-size: 1.8rem;
+  color: #444;
+}

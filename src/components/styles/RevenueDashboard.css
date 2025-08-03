@@ -1,0 +1,160 @@
+.rl-revenue-dashboard {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  color: #2d2d2d;
+}
+
+.rl-revenue-dashboard h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.rl-revenue-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.rl-revenue-summary > div {
+  flex: 1 1 30%;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: background 0.2s ease;
+}
+
+.rl-revenue-summary .income { border-left: 4px solid #38b000; }
+.rl-revenue-summary .expense { border-left: 4px solid #e63946; }
+.rl-revenue-summary .balance { border-left: 4px solid #0077b6; }
+
+.rl-revenue-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.rl-revenue-form select,
+.rl-revenue-form input {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1 1 150px;
+  font-size: 1rem;
+}
+
+.rl-revenue-form button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.rl-revenue-form button:hover {
+  background: #2563eb;
+}
+
+.rl-revenue-breakdown {
+  margin-bottom: 2rem;
+}
+
+.rl-revenue-breakdown h4 {
+  margin-bottom: 0.6rem;
+  color: #334155;
+}
+
+.rl-revenue-breakdown ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rl-revenue-breakdown li {
+  margin: 0.3rem 0;
+  font-weight: 500;
+}
+
+.rl-revenue-entries {
+  overflow-x: auto;
+  background: #fdfdfd;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.rl-revenue-entries h4 {
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.rl-revenue-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.rl-revenue-table thead {
+  background: #e2e8f0;
+}
+
+.rl-revenue-table th,
+.rl-revenue-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.income-row {
+  background: #e6fffa;
+}
+
+.expense-row {
+  background: #fff0f0;
+}
+
+.approve-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.approve-btn:hover {
+  background: #059669;
+}
+
+@media (max-width: 768px) {
+  .rl-revenue-form {
+    flex-direction: column;
+  }
+
+  .rl-revenue-summary > div {
+    flex: 1 1 100%;
+  }
+
+  .rl-revenue-table {
+    font-size: 0.85rem;
+  }
+}
