@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/internal-vault/static/css/main.761e75fb.css",
+    "main.js": "/internal-vault/static/js/main.590ac32e.js",
+    "index.html": "/internal-vault/index.html",
+    "main.761e75fb.css.map": "/internal-vault/static/css/main.761e75fb.css.map",
+    "main.590ac32e.js.map": "/internal-vault/static/js/main.590ac32e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.761e75fb.css",
+    "static/js/main.590ac32e.js"
+  ]
+}
