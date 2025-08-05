@@ -1,126 +1,69 @@
-/*
-  This style creates a professional, 3D effect for the VaultHeader.
-  The key techniques are using 'perspective' and layered 'text-shadow'
-  to give the illusion of depth and light.
-*/
-
-/* The core container for the 3D effect.
-  We set a perspective to define the 3D space.
-*/
-.vault-title {
-  font-family: 'Electrolize', sans-serif;
-  font-size: 4rem;
-  font-weight: bold;
+.vault-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  color: white;
+  overflow: hidden;
   text-align: center;
-  color: #e6f7ff; /* A professional, bright text color */
+}
+
+.vault-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 2rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
   position: relative;
-  margin: 2rem 0;
-  cursor: pointer;
-  
-  /* This is crucial for the 3D effect. It defines the "camera" perspective. */
-  perspective: 1000px;
+  color: black;
+  z-index: 1;
 }
 
-/* The main text that will appear to be floating.
-  We use a subtle text-shadow to give it a clean, defined edge.
-*/
 .vault-glow {
-  position: relative;
   display: inline-block;
-  
-  /* The 3D transformation is subtle, making the text feel like it's
-    slightly extruded from the screen.
-  */
-  transform-style: preserve-3d;
-  transform: rotateX(15deg);
-  
-  /* Multiple text-shadows create a sense of depth and a professional,
-    neon-like glow without being overwhelming.
-  */
-  text-shadow: 
-    0 0 5px #fff,
-    0 0 10px #62c6f8,
-    0 0 20px #7fcbf1,
-    0 0 40px #63c5f7;
+  animation: vaultGlow 4s infinite ease-in-out;
 }
 
-/*
-  A pseudo-element to create a back layer of text, enhancing the 3D effect.
-  It's positioned slightly behind the main text and is darker.
-*/
-.vault-glow::before {
-  content: attr(data-text); /* Use a data attribute to get the text */
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: rgba(0, 170, 255, 0.2); /* Semi-transparent blue for the back layer */
-  z-index: -1;
-  
-  /* We translate it back on the Z-axis to place it behind the main text.
-    The blur enhances the sense of distance.
-  */
-  transform: translateZ(-10px) translateX(-5px) translateY(-5px);
-  filter: blur(2px);
-}
-
-/* The first letter gets a unique, elegant pulse */
 .vault-pulse-letter {
   display: inline-block;
+  animation: pulse 1.5s infinite;
+  font-weight: 900;
 }
 
-/* To use the pseudo-element, you need to add a data attribute 
-  to your <span> tag in the JSX.
-*/
-/* Example of how the JSX would look with the data-text attribute: */
-/* <span className="vault-glow" data-text="RideLogic Vault">
-    <span className="vault-pulse-letter">R</span>ideLogic Vault
-</span> */
+.team-pic {
+  max-width: 480px;
+  width: 100%;
+  border-radius: 14px;
+  margin-top: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
 
-/* --- Responsive Styles --- */
+.team-pic:hover {
+  transform: scale(1.03);
+}
 
-/* For screens smaller than 768px (e.g., tablets) */
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+/* Responsive Design */
 @media (max-width: 768px) {
   .vault-title {
-    font-size: 3rem;
-    letter-spacing: 0.08em;
+    font-size: 2.2rem;
   }
 
-  .vault-glow {
-    /* Adjust text-shadow for a cleaner look on smaller screens */
-    text-shadow:
-      0 0 4px #fff,
-      0 0 8px #62c6f8,
-      0 0 16px #7fcbf1,
-      0 0 30px #63c5f7;
-  }
-  
-  .vault-glow::before {
-    /* Adjust the back layer to be less pronounced on smaller screens */
-    transform: translateZ(-8px) translateX(-3px) translateY(-3px);
-  }
-}
-
-/* For screens smaller than 480px (e.g., mobile phones) */
-@media (max-width: 480px) {
-  .vault-title {
-    font-size: 2rem;
-    letter-spacing: 0.05em;
-    margin: 1rem 0;
-  }
-
-  .vault-glow {
-    /* Further adjust text-shadow for mobile */
-    text-shadow:
-      0 0 3px #fff,
-      0 0 6px #62c6f8,
-      0 0 10px #7fcbf1,
-      0 0 20px #63c5f7;
-  }
-  
-  .vault-glow::before {
-    /* Further adjust the back layer for mobile */
-    transform: translateZ(-6px) translateX(-2px) translateY(-2px);
+  .team-pic {
+    max-width: 90%;
   }
 }

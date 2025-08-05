@@ -58,7 +58,7 @@ export default function HomePage({user}) {
   return (
     <div className="rl-homepage">
       <VaultHeader/>
-      <p className="vault-subtitle">Welcome back {user?.nickname}! Let's build!</p>
+      <p className="vault-subtitle"><h1>Welcome back {user?.nickname}! Let's build!</h1></p>
 
       <div className="rl-card-grid">
         {cardData.map((card, index) => (
